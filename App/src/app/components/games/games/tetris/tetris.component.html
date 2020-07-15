@@ -1,0 +1,12 @@
+<div id="tetriswrapper">
+    <h1>TETRIS</h1>
+    <button (click)="play()" class="play-button">Play</button>
+    <p>Score: <span class="highlighted">{{ points }}</span> Lines: <span class="highlighted">{{ lines }}</span> Level: <span class="highlighted">{{ level }}</span></p>
+    <canvas #next class="next"></canvas>
+    <canvas #board class="tetris"></canvas>
+    <br/>
+    <i class="fa fa-refresh fa-2x" (click)="buttonclicks('toggle')" aria-hidden="true"></i>
+    <i class="fa fa-arrow-left fa-2x nav-button" (click)="buttonclicks('left')" aria-hidden="true"></i>
+    <i class="fa fa-arrow-right fa-2x nav-button" (click)="buttonclicks('right')" aria-hidden="true"></i>
+    <i class="fa fa-arrow-down fa-2x nav-button" (click)="buttonclicks('down')" aria-hidden="true"></i>
+</div>

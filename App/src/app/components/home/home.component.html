@@ -1,0 +1,45 @@
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Home" (click)="this.toolAction('welcome')"><i class="fa fa-home fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="About Me" (click)="this.toolAction('about')"><i class="fa fa-user fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Google Map" (click)="this.toolAction('google')"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Twitter" (click)="this.toolAction('twitter')"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Email Form" (click)="this.toolAction('email')"><i class="fa fa fa-envelope fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolAction('games')"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="aboutoverlay" *ngIf="this.aboutOverlay" [@slideInOut]>
+        <div id="about-area">
+            <about-overlay></about-overlay>
+        </div>
+    </div>
+    <div id="googlemapoverlay" *ngIf="this.googleMapOverlay" [@slideInOut]>
+        <div id="googlemap-area">
+            <googlemap-overlay></googlemap-overlay>
+        </div>
+    </div>
+    <div id="twitteroverlay" *ngIf="this.twitterOverlay" [@slideInOut]> 
+        <div id="twitter-area">
+            <twitter-overlay></twitter-overlay>
+        </div>
+    </div>
+    <div id="emailoverlay" *ngIf="this.emailOverlay" [@slideInOut]>
+        <div id="email-area">
+            <email-overlay></email-overlay>
+        </div>
+    </div>
+    <div id="gamesoverlay" *ngIf="this.gamesOverlay" [@slideInOut]>
+        <div id="games-area">
+            <games-overlay></games-overlay>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <welcome *ngIf="this.showWelcome"></welcome>
+    <about *ngIf="this.showAbout"></about>
+    <googlemap *ngIf="this.showGoogle"></googlemap>
+    <twitter *ngIf="this.showTwitter"></twitter>
+    <formemail *ngIf="this.showEmail"></formemail>
+    <games *ngIf="this.showGames"></games>
+</div>
+<footer></footer>

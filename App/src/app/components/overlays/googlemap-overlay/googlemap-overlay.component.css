@@ -1,0 +1,10 @@
+h5 {
+    color: #FF7F50;
+}
+.skillhighlight {
+    color: #FF7F50;
+}
+.skillhighlight .fa-inverse {
+    color: #FF7F50 !important;
+    float: left;
+}
