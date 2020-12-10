@@ -152,6 +152,7 @@
     <Compile Include="Models\GoogleModel.cs" />
     <Compile Include="Models\TwitterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CredentialService.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\TwitterService.cs" />
   </ItemGroup>

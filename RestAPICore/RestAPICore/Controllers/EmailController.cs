@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using Microsoft.AspNetCore.Mvc;
 
 
-namespace RestAPI.Controllers
+namespace RestAPICore.Controllers
 {
-    [RoutePrefix("api/email")]
-    public class EmailController : ApiController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class EmailController : ControllerBase
     {
         Services.EmailService emailService = new Services.EmailService()
         {

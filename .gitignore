@@ -16,6 +16,8 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+PublishProfiles/
+Properties/
 x64/
 x86/
 [Aa][Rr][Mm]/
@@ -66,4 +68,11 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#Ignore Publish Info
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+/profile.arm.json
 
