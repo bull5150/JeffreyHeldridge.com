@@ -9,5 +9,5 @@ This site is live at the below address:
 Good examples of Twitter, GoogleMaps Apis, .net vs .netcore
 
 
-This repo also contains two backends.  I originally built the .net4.7 but later created a .netcore backend in .net 5.0 as well that is the backend that is actually used on the website.
+This repo also contains two backends.  I originally built the .net 4.7(RestAPI) but later created a .netcore backend in .net 5.0(RestAPIcore) as well that is the backend that is actually used on the website.
 
