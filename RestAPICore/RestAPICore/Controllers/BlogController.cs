@@ -20,10 +20,20 @@ namespace RestAPICore.Controllers
             _blogService = blogService;
         }
 
+        /// <summary>
+        /// Gets entire list of Blog Entries
+        /// </summary>
+        /// <remarks>Uses a MongoDB hosted on Azure</remarks>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<List<BlogModel>> Get() =>
             _blogService.Get();
 
+        /// <summary>
+        /// Gets a Blog Entry by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:length(24)}", Name = "GetBlog")]
         public ActionResult<BlogModel> Get(string id)
         {
@@ -37,6 +47,12 @@ namespace RestAPICore.Controllers
             return blog;
         }
 
+        /// <summary>
+        /// Add a Blog Entry (set id to null)
+        /// </summary>
+        /// <remarks>Uses a MongoDB hosted on Azure</remarks>
+        /// <param name="blog"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<BlogModel> Create(BlogModel blog)
         {
@@ -45,6 +61,13 @@ namespace RestAPICore.Controllers
             return CreatedAtRoute("GetBlog", new { id = blog.Id.ToString() }, blog);
         }
 
+        /// <summary>
+        /// Update Blog Entry by ID
+        /// </summary>
+        /// <remarks>Uses a MongoDB hosted on Azure</remarks>
+        /// <param name="id"></param>
+        /// <param name="blogIn"></param>
+        /// <returns></returns>
         [HttpPut("{id:length(24)}")]
         public IActionResult Update(string id, BlogModel blogIn)
         {
@@ -60,6 +83,12 @@ namespace RestAPICore.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete a Blog Entry by ID
+        /// </summary>
+        /// <remarks>Uses a MongoDB hosted on Azure</remarks>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id:length(24)}")]
         public IActionResult Delete(string id)
         {

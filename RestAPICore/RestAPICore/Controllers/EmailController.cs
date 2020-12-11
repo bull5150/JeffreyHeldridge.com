@@ -11,6 +11,11 @@ namespace RestAPICore.Controllers
         {
             AzureSendGridKey = Services.CredentialService.sendGridKey
         };
+        /// <summary>
+        /// Post to send an email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("")]
         public string sendEmail(Models.EmailModel email)

@@ -9,7 +9,9 @@ using RestAPICore.Models;
 using RestAPICore.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace RestAPICore
@@ -51,6 +53,11 @@ namespace RestAPICore
                         Url = new Uri("https://jeffreyheldridge.com/#/"),
                     },
                 });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 
