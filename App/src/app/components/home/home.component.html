@@ -2,6 +2,7 @@
     <div id="toolbuttons">
         <button class="btn btn-primary btn-sm" title="Home" (click)="this.toolAction('welcome')"><i class="fa fa-home fa-2x" aria-hidden="true"></i></button>
         <button class="btn btn-primary btn-sm" title="About Me" (click)="this.toolAction('about')"><i class="fa fa-user fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Site Blog" (click)="this.toolAction('blog')"><i class="fa fa-commenting fa-2x" aria-hidden="true"></i></button>
         <button class="btn btn-primary btn-sm" title="Google Map" (click)="this.toolAction('google')"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></button>
         <button class="btn btn-primary btn-sm" title="Twitter" (click)="this.toolAction('twitter')"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></button>
         <button class="btn btn-primary btn-sm" title="Email Form" (click)="this.toolAction('email')"><i class="fa fa fa-envelope fa-2x" aria-hidden="true"></i></button>
@@ -11,6 +12,11 @@
     <div id="aboutoverlay" *ngIf="this.aboutOverlay" [@slideInOut]>
         <div id="about-area">
             <about-overlay></about-overlay>
+        </div>
+    </div>
+    <div id="blogoverlay" *ngIf="this.blogOverlay" [@slideInOut]>
+        <div id="blog-area">
+            <blog-overlay></blog-overlay>
         </div>
     </div>
     <div id="googlemapoverlay" *ngIf="this.googleMapOverlay" [@slideInOut]>
@@ -37,6 +43,7 @@
 <div id="content">
     <welcome *ngIf="this.showWelcome"></welcome>
     <about *ngIf="this.showAbout"></about>
+    <blog *ngIf="this.showBlog"></blog>
     <googlemap *ngIf="this.showGoogle"></googlemap>
     <twitter *ngIf="this.showTwitter"></twitter>
     <formemail *ngIf="this.showEmail"></formemail>

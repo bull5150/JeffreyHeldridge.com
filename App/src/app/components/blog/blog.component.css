@@ -1,0 +1,61 @@
+img {
+    border-radius: 50%;
+    margin-left: 5%;
+    width: 250px;
+    float: left;
+}
+#aboutwrapper{
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#codeskills{
+    width: 800px; 
+    height: 200px; 
+    margin-left: -50px;
+}
+
+#softskills{
+    width: 800px; 
+    height: 200px; 
+    margin-left: -50px;
+}
+
+@media (max-width: 480px) { 
+    #codeskills{
+        width: 400px; 
+        height: 200px; 
+        margin-left: -100px;
+        font-size: .5em;
+    }
+    #softskills{
+        width: 400px; 
+        height: 200px; 
+        margin-left: -100px;
+        font-size: .5em;
+    }
+    img {
+        float: none;
+        margin-left: 100px;
+    }
+ }
+
+ @media (max-width: 375px) { 
+    #codeskills{
+        width: 300px; 
+        height: 200px; 
+        margin-left: -80px;
+        font-size: .5em;
+    }
+    #softskills{
+        width: 300px; 
+        height: 200px; 
+        margin-left: -80px;
+        font-size: .5em;
+    }
+    img {
+        float: none;
+        margin-left: 60px;
+    }
+ }

@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   public toolActive: boolean;
   public showGoogle: boolean;
   public showAbout: boolean;
+  public showBlog: boolean;
   public showWelcome: boolean;
   public showTwitter: boolean;
   public showEmail: boolean;
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
   //overlays
   public googleMapOverlay: boolean;
   public aboutOverlay: boolean;
+  public blogOverlay: boolean;
   public twitterOverlay: boolean;
   public emailOverlay: boolean;
   public gamesOverlay: boolean;
@@ -45,6 +47,7 @@ export class HomeComponent implements OnInit {
     this.toolActive = false;
     this.showGoogle = false;
     this.showAbout = false;
+    this.showBlog = false;
     this.showTwitter = false;
     this.showWelcome = false;
     this.showEmail = false;
@@ -54,6 +57,7 @@ export class HomeComponent implements OnInit {
   toolAction(selected: string): void {
     this.hideAll();
     this.googleMapOverlay = false;
+    this.blogOverlay = false;
     this.aboutOverlay = false;
     this.twitterOverlay = false;
     this.emailOverlay = false;
@@ -71,6 +75,12 @@ export class HomeComponent implements OnInit {
           this.aboutOverlay = true;
         }, 725);
         break;
+      case "blog":
+          this.showBlog = true;
+          setTimeout(() => {
+            this.blogOverlay = true;
+          }, 725);
+          break;
       case "google":
         this.showGoogle = true;
         setTimeout(() => {
@@ -100,6 +110,7 @@ export class HomeComponent implements OnInit {
   toolClose(): void {
     this.googleMapOverlay = false;
     this.aboutOverlay = false;
+    this.blogOverlay = false;
     this.twitterOverlay = false;
     this.emailOverlay = false;
     this.gamesOverlay = false;
