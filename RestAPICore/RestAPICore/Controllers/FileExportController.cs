@@ -6,7 +6,7 @@ namespace RestAPICore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FileExportController : ControllerBase
+    public class FileController : ControllerBase
     {
         /// <summary>
         /// Returns PDF Resume file on server for download.
