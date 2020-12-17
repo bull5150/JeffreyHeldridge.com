@@ -1,6 +1,6 @@
 h5 {
-    color: #FF7F50;
+    color: var(--apptheme);
 }
 a {
-    color: #FF7F50;
+    color: var(--apptheme);
 }

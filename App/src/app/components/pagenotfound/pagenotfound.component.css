@@ -10,7 +10,7 @@ footer {
     margin-top: calc(55% - 250px);
  }
  a{
-     color: #FF7F50;
+     color: var(--apptheme);
  }
  .highlighted {
      font-weight: bold;

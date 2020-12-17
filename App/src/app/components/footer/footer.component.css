@@ -6,7 +6,7 @@
     padding: 15px; 
 }
 h5{
-    color: #FF7F50;;
+    color: var(--apptheme);
 }
 a{
     color: #fff;

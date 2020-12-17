@@ -18,6 +18,7 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
+      this.blogList.reverse();
     });
   }
 }

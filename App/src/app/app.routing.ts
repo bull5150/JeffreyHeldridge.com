@@ -9,12 +9,14 @@ import { GamesComponent } from './components/games/games.component';
 import { SnakeComponent } from './components/games/games/snake/snake.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { TetrisComponent } from './components/games/games/tetris/tetris.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'google', component: GooglemapComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'blog', component: BlogComponent },
   { path: 'twitter', component: TwitterComponent },
   { path: 'email', component: FormemailComponent },
   { path: 'games', component: GamesComponent },

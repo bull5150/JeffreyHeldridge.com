@@ -8,5 +8,5 @@ img{
 }
 .imagelabel{
     margin-left: 45%;
-    color: #FF7F50;
+    color: var(--apptheme);
 }

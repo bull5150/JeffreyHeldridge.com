@@ -1,1 +1,6 @@
 @import "./assets/bootswatch/bootstrap.min.css";
+
+:root{
+    --apptheme: #9f00ff;
+    --bannertheme: rgba(159,0,255,.75);
+}

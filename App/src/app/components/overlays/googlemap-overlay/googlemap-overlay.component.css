@@ -1,10 +1,10 @@
 h5 {
-    color: #FF7F50;
+    color: var(--apptheme);
 }
 .skillhighlight {
-    color: #FF7F50;
+    color: var(--apptheme);
 }
 .skillhighlight .fa-inverse {
-    color: #FF7F50 !important;
+    color: var(--apptheme) !important;
     float: left;
 }

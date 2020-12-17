@@ -66,7 +66,7 @@ import { TetrisComponent } from './components/games/games/tetris/tetris.componen
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR API KEY HERE&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your API KEY HERE&libraries=drawing'}),
   ],
   providers: [NguiMapComponent, ChartapiService, BlogapiService, GooglemarkerapiService, EmailapiService, SnakeScore],
   bootstrap: [AppComponent]
