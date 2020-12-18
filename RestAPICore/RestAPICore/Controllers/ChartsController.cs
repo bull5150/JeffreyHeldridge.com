@@ -26,7 +26,7 @@ namespace RestAPICore.Controllers
             skillsList.Add(skill);
             skill = new Models.ChartModel();
             skill.skill = "Java";
-            skill.value = 5;
+            skill.value = 7;
             skillsList.Add(skill);
             skill = new Models.ChartModel();
             skill.skill = "Angular";
@@ -58,7 +58,7 @@ namespace RestAPICore.Controllers
             skillsList.Add(skill);
             skill = new Models.ChartModel();
             skill.skill = "Azure";
-            skill.value = 6;
+            skill.value = 7;
             skillsList.Add(skill);
             return skillsList;
         }
