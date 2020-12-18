@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { CONTROLS, COLORS, BOARD_SIZE, GAME_MODES } from './snake.constants';
-import { SnakeScore } from 'src/app/services/snake-score.service';
+import { SnakeScore } from '../../../../services/snake-score.service';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'snake',
@@ -42,9 +45,16 @@ export class SnakeComponent {
   };
 
   constructor(
-    private bestScoreService: SnakeScore
+    private bestScoreService: SnakeScore,
+    public router: Router
   ) {
     this.setBoard();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
   }
 
   handleKeyboardEvents(e: KeyboardEvent) {

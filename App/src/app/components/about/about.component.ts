@@ -3,7 +3,10 @@ import { Component, OnInit, NgZone, OnDestroy } from '@angular/core';
 import * as am4core from "@amcharts/amcharts4/core";
 //@ts-ignore
 import * as am4charts from '@amcharts/amcharts4/charts'; 
-import { ChartapiService } from 'src/app/services/chartapi.service';
+import { ChartapiService } from '../../services/chartapi.service';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'about',
@@ -16,7 +19,10 @@ export class AboutComponent implements OnInit {
   public codingChart: am4charts.XYChart;
   public softSkillsChart: am4charts.XYChart;
 
-  constructor(private zone: NgZone, private chartService: ChartapiService) { }
+  constructor(private zone: NgZone, private chartService: ChartapiService, public router: Router) { 
+      ga('set', 'page', 'About');
+      ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
   }

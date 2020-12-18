@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { marker, mapmarker } from 'src/app/models/googlemap_models';
+import { marker, mapmarker } from '../../models/googlemap_models';
 import { truncateWithEllipsis } from '@amcharts/amcharts4/.internal/core/utils/Utils';
-import { GooglemarkerapiService } from 'src/app/services/googlemarkerapi.service';
+import { GooglemarkerapiService } from '../../services/googlemarkerapi.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 declare var markerCheck: boolean;
 declare var markers: marker[];
 declare var google: any;
+declare let ga: Function;
 
 @Component({
   selector: 'googlemap',
@@ -44,7 +46,10 @@ export class GooglemapComponent implements OnInit {
   public R: number;
   public LatLng: google.maps.LatLng;
 
-  constructor(public markerService: GooglemarkerapiService) {}
+  constructor(public markerService: GooglemarkerapiService, public router: Router) {
+      ga('set', 'page', 'Google_Maps');
+      ga('send', 'pageview');
+  }
 
   ngOnInit() {
     this.is_marker = false;

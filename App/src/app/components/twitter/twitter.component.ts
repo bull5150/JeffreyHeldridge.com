@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { TwitterapiService } from 'src/app/services/twitterapi.service';
-import { tweets } from 'src/app/models/twitter_models';
+import { TwitterapiService } from '../../services/twitterapi.service';
+import { tweets } from '../../models/twitter_models';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'twitter',
@@ -13,7 +16,10 @@ export class TwitterComponent implements OnInit {
   public searchSelection: string;
   public searchValue: string;
 
-  constructor(public twitterService: TwitterapiService) { }
+  constructor(public twitterService: TwitterapiService, public router: Router) { 
+      ga('set', 'page', 'Twitter');
+      ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
     this.searchSelection = "user";

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'welcome',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { 
+    ga('set', 'page', 'Welcome');
+    ga('send', 'pageview');
+  }
 
   ngOnInit(): void {
   }

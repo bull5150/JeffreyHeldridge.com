@@ -2,6 +2,9 @@ import { Component, ViewChild, ElementRef, OnInit, HostListener } from '@angular
 import { COLS, BLOCK_SIZE, ROWS, COLORS, LINES_PER_LEVEL, LEVEL, POINTS, KEY } from './tetris.constants';
 import { Piece, IPiece } from './tetrispiece.component';
 import { GameService } from './tetris.service';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'tetris',
@@ -57,7 +60,14 @@ export class TetrisComponent implements OnInit {
     }
   }
 
-  constructor(private service: GameService) {}
+  constructor(private service: GameService, public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
+  }
 
   ngOnInit() {
     this.initBoard();

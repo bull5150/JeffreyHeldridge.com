@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailapiService } from 'src/app/services/emailapi.service';
+import { EmailapiService } from '../../services/emailapi.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { email } from 'src/app/models/email_models';
+import { email } from '../../models/email_models';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'formemail',
@@ -14,7 +17,10 @@ export class FormemailComponent implements OnInit {
   public postForm: email;
   public alert: boolean;
 
-  constructor(private emailService: EmailapiService, private formBuilder: FormBuilder) { }
+  constructor(private emailService: EmailapiService, private formBuilder: FormBuilder, public router: Router) {
+      ga('set', 'page', 'Email');
+      ga('send', 'pageview');
+   }
 
   ngOnInit(): void {
     this.alert = false;
