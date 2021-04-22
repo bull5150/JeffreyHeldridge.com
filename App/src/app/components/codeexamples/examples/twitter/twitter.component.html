@@ -1,0 +1,36 @@
+
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Info" (click)="this.toolAction('twitter')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="twitteroverlay" *ngIf="this.twitterOverlay" [@slideInOut]>
+        <div id="twitter-area">
+            <twitter-overlay></twitter-overlay>
+        </div>
+    </div>
+</div>
+<div id="twitterwrapper">
+    <div id="searcharea">
+        <div>
+            <select class="btn btn-primary" id="dropdownnnn" [(ngModel)]="this.searchSelection">
+                <option value="user">By User Name</option>
+                <option value="keyword">By KeyWord</option>
+            </select>
+        </div>
+        <div>
+            <input class="btn btn-primary btn-1" id="inputttt" placeholder="User Name or Keyword Here...." [(ngModel)]="this.searchValue"/>
+        </div>
+        <div>
+            <a class="btn btn-primary btn-l" id="submitbutton" (click)="submitbtn()">Submit</a>
+        </div>
+    </div>
+    <div id="tweet_area" *ngFor="let tweet of tweets">
+        <img src="{{tweet.user.profile_image_url}}" onError="src='../../../assets/media/default_profile_normal.png'"> <h5>{{tweet.user.name}}</h5>
+        <h6>@{{tweet.user.screen_name}}</h6>
+        {{tweet.full_text}}
+        <br>
+        <span class="tweetdets">{{tweet.user.location}} - {{tweet.created_at}}</span>
+    </div>
+</div>
+

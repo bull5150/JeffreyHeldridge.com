@@ -1,5 +1,6 @@
 .jumbotron{
     background-color: #555;
+    padding-top: 15px;
 }
 #textcontainer{
     margin-left: 50px;
@@ -12,11 +13,6 @@ h1{
 }
 .jumbospanh6{
     color: #fff;
-}
-#sociallinks{
-    float: left;
-    margin-top: -60px;
-    margin-left: -25px; 
 }
 h1{
     animation: animated-text 4s steps(29, end) 1s 1 normal both, 
@@ -43,11 +39,6 @@ h1{
 
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-    #sociallinks{
-        float: none;
-        margin-top: -20px;
-        margin-left: -5px; 
-    }
     h1{
         font-size: .9em;
     }

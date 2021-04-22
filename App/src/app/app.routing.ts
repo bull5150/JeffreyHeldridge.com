@@ -1,24 +1,29 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { GooglemapComponent } from './components/googlemap/googlemap.component';
+import { GooglemapComponent } from './components/codeexamples/examples/googlemap/googlemap.component';
 import { AboutComponent } from './components/about/about.component';
-import { TwitterComponent } from './components/twitter/twitter.component';
-import { FormemailComponent } from './components/formemail/formemail.component';
-import { GamesComponent } from './components/games/games.component';
-import { SnakeComponent } from './components/games/games/snake/snake.component';
+import { TwitterComponent } from './components/codeexamples/examples/twitter/twitter.component';
+import { GamesComponent } from './components/codeexamples/examples/games/games.component';
+import { SnakeComponent } from './components/codeexamples/examples/games/games/snake/snake.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { TetrisComponent } from './components/games/games/tetris/tetris.component';
-import { BlogComponent } from './components/blog/blog.component';
+import { TetrisComponent } from './components/codeexamples/examples/games/games/tetris/tetris.component';
+import { BlogComponent } from './components/codeexamples/examples/blog/blog.component';
+import { CodeexamplesComponent } from './components/codeexamples/codeexamples.component';
+import { ContactmeComponent } from './components/contactme/contactme.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { BlogreadComponent } from './components/blogread/blogread.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: WelcomeComponent },
+  { path: 'home', component: WelcomeComponent },
+  { path: 'contact', component: ContactmeComponent },
+  { path: 'examples', component: CodeexamplesComponent },
   { path: 'google', component: GooglemapComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'blogread', component: BlogreadComponent },
   { path: 'twitter', component: TwitterComponent },
-  { path: 'email', component: FormemailComponent },
   { path: 'games', component: GamesComponent },
   { path: 'snake', component: SnakeComponent },
   { path: 'tetris', component: TetrisComponent },

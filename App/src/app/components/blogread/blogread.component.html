@@ -1,0 +1,8 @@
+<div id="blogwrapper">
+    <h4>Developer Blog</h4>
+    <div id="blog_area" *ngFor="let blog of blogList">
+        <img src="{{blog.thumbImageURL}}" onError="src='../../../assets/media/profile_small.jpg'"> <h5>{{blog.createDate}}</h5>
+        {{blog.blogEntry}}
+        <br>
+    </div>
+</div>

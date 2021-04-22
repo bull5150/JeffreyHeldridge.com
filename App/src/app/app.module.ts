@@ -16,24 +16,25 @@ import { SnakeScore } from './services/snake-score.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { GooglemapComponent } from './components/googlemap/googlemap.component';
+import { GooglemapComponent } from './components/codeexamples/examples/googlemap/googlemap.component';
 import { AboutComponent } from './components/about/about.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { TwitterComponent } from './components/twitter/twitter.component';
+import { BlogComponent } from './components/codeexamples/examples/blog/blog.component';
+import { TwitterComponent } from './components/codeexamples/examples/twitter/twitter.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { HeaderComponent } from './components/header/header.component';
-import { GooglemapOverlayComponent } from './components/overlays/googlemap-overlay/googlemap-overlay.component';
-import { AboutOverlayComponent } from './components/overlays/about-overlay/about-overlay.component';
-import { BlogOverlayComponent } from './components/overlays/blog-overlay/blog-overlay.component';
-import { TwitterOverlayComponent } from './components/overlays/twitter-overlay/twitter-overlay.component';
-import { FormemailComponent } from './components/formemail/formemail.component';
-import { EmailOverlayComponent } from './components/overlays/email-overlay/email-overlay.component';
+import { GooglemapOverlayComponent } from './components/codeexamples/examples/googlemap/overlay/googlemap-overlay.component';
+import { BlogOverlayComponent } from './components/codeexamples/examples/blog/overlay/blog-overlay.component';
+import { TwitterOverlayComponent } from './components/codeexamples/examples/twitter/overlay/twitter-overlay.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { GamesComponent } from './components/games/games.component';
-import { SnakeComponent } from './components/games/games/snake/snake.component';
-import { GamesOverlayComponent } from './components/overlays/games-overlay/games-overlay.component';
+import { GamesComponent } from './components/codeexamples/examples/games/games.component';
+import { SnakeComponent } from './components/codeexamples/examples/games/games/snake/snake.component';
+import { GamesOverlayComponent } from './components/codeexamples/examples/games/overlay/games-overlay.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { TetrisComponent } from './components/games/games/tetris/tetris.component';
+import { TetrisComponent } from './components/codeexamples/examples/games/games/tetris/tetris.component';
+import { CodeexamplesComponent } from './components/codeexamples/codeexamples.component';
+import { ContactmeComponent } from './components/contactme/contactme.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { BlogreadComponent } from './components/blogread/blogread.component';
 
 @NgModule({
   declarations: [
@@ -46,17 +47,18 @@ import { TetrisComponent } from './components/games/games/tetris/tetris.componen
     WelcomeComponent,
     HeaderComponent,
     GooglemapOverlayComponent,
-    AboutOverlayComponent,
     BlogOverlayComponent,
     TwitterOverlayComponent,
-    FormemailComponent,
-    EmailOverlayComponent,
     FooterComponent,
     GamesComponent,
     SnakeComponent,
     GamesOverlayComponent,
     PagenotfoundComponent,
-    TetrisComponent
+    TetrisComponent,
+    CodeexamplesComponent,
+    ContactmeComponent,
+    NavigationComponent,
+    BlogreadComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -66,7 +68,7 @@ import { TetrisComponent } from './components/games/games/tetris/tetris.componen
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your API KEY HERE&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAL_6ESBrgoyHsI_EhCVIiEzako8eG0IgI&libraries=drawing'}),
   ],
   providers: [NguiMapComponent, ChartapiService, BlogapiService, GooglemarkerapiService, EmailapiService, SnakeScore],
   bootstrap: [AppComponent]
