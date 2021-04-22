@@ -68,7 +68,7 @@ import { BlogreadComponent } from './components/blogread/blogread.component';
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAL_6ESBrgoyHsI_EhCVIiEzako8eG0IgI&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your APIKEY HERE&libraries=drawing'}),
   ],
   providers: [NguiMapComponent, ChartapiService, BlogapiService, GooglemarkerapiService, EmailapiService, SnakeScore],
   bootstrap: [AppComponent]
