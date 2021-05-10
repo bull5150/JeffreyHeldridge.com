@@ -10,7 +10,13 @@
         </div>
     </div>
 </div>
-<div id="twitterwrapper">
+<div class="text-center" id="loadingmask" *ngIf="infoLoaded == false">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <br/>Loading Please Wait...
+</div>
+<div id="twitterwrapper" *ngIf="infoLoaded == true">
     <div id="searcharea">
         <div>
             <select class="btn btn-primary" id="dropdownnnn" [(ngModel)]="this.searchSelection">

@@ -22,7 +22,9 @@ img {
 h4{
     text-align: center;
 }
-
+#loadingmask{
+    margin-bottom: 400px;
+}
 
 @media (max-width: 480px) { 
     #blogwrapper{

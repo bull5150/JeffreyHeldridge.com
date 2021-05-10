@@ -29,6 +29,7 @@ export class BlogComponent implements OnInit {
   public blogOverlay: boolean;
   public toolActive: boolean;
   public showBlog: boolean;
+  public infoLoaded: boolean;
 
   constructor(private blogService:BlogapiService, public router: Router) {
       ga('set', 'page', 'Blog');
@@ -36,10 +37,12 @@ export class BlogComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.infoLoaded = false;
+    this.hideAll();
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
       this.blogList.reverse();
-      this.hideAll();
+      this.infoLoaded = true;
     });
   }
     //overlay functions

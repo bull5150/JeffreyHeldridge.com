@@ -67,10 +67,11 @@ namespace RestAPICore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                //Load Swagger
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestAPIcore v1"));
             }
-            //Load Swagger
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RestAPIcore v1"));
 
             //Use Default Pages ie index.html
             app.UseDefaultFiles();

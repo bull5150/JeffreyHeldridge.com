@@ -13,6 +13,7 @@ declare let ga: Function;
 export class BlogreadComponent implements OnInit {
 
   public blogList: blog[];
+  public infoLoaded: boolean;
 
   constructor(private blogService:BlogapiService, public router: Router) {
       ga('set', 'page', 'BlogRead');
@@ -20,9 +21,11 @@ export class BlogreadComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.infoLoaded = false;
     this.blogService.getBlogList().subscribe(response =>{
       this.blogList = response;
       this.blogList.reverse();
+      this.infoLoaded = true;
     });
   }
 }

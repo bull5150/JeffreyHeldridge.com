@@ -41,6 +41,9 @@ img {
     color: #fff;
     height: 42px;
 }
+#loadingmask{
+    margin-bottom: 400px;
+}
 
 
 /* Landscape phones and down */

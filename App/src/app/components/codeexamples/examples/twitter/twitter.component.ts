@@ -30,6 +30,7 @@ export class TwitterComponent implements OnInit {
   public twitterOverlay: boolean;
   public toolActive: boolean;
   public showTwitter: boolean;
+  public infoLoaded: boolean;
 
   constructor(public twitterService: TwitterapiService, public router: Router) { 
       ga('set', 'page', 'Twitter');
@@ -37,12 +38,13 @@ export class TwitterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.infoLoaded = false;
     this.searchSelection = "user";
     this.getTweetsbyUser("jmheldridge",50);
+    this.hideAll();
   }
 
   submitbtn() {
-    console.log(this.searchSelection);
     if(this.searchSelection == "user")
     {
       this.getTweetsbyUser(this.searchValue,50);
@@ -56,6 +58,7 @@ export class TwitterComponent implements OnInit {
   getTweetsbyUser(userName: string, count: number){
     this.twitterService.getTweetsbyUser(userName, count).subscribe(response =>{
       this.tweets = response;
+      this.infoLoaded = true;
     });
   }
   getTweetsbyKeyword(keyword: string, count: number){

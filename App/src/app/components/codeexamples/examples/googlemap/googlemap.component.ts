@@ -108,7 +108,7 @@ export class GooglemapComponent implements OnInit {
   }
   //when map loads
   onMapReady(map) {
-    this.googleMap = map
+    this.googleMap = map;
     this.geo_coder = new google.maps.Geocoder();
     this.directionService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer;

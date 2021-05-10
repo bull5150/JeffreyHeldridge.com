@@ -13,9 +13,9 @@ import { BlogapiService } from './services/blogapi.service';
 import { GooglemarkerapiService } from './services/googlemarkerapi.service';
 import { EmailapiService } from './services/emailapi.service';
 import { SnakeScore } from './services/snake-score.service';
+import { PolygonIOService } from './services/polygon-io.service';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { GooglemapComponent } from './components/codeexamples/examples/googlemap/googlemap.component';
 import { AboutComponent } from './components/about/about.component';
 import { BlogComponent } from './components/codeexamples/examples/blog/blog.component';
@@ -35,11 +35,13 @@ import { CodeexamplesComponent } from './components/codeexamples/codeexamples.co
 import { ContactmeComponent } from './components/contactme/contactme.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
+import { PolygonioComponent } from './components/codeexamples/examples/polygonio/polygonio.component';
+import { PolygonOverlayComponent } from './components/codeexamples/examples/polygonio/overlay/polygon-overlay.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     GooglemapComponent,
     BlogComponent,
     AboutComponent,
@@ -59,6 +61,8 @@ import { BlogreadComponent } from './components/blogread/blogread.component';
     ContactmeComponent,
     NavigationComponent,
     BlogreadComponent,
+    PolygonioComponent,
+    PolygonOverlayComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -68,9 +72,17 @@ import { BlogreadComponent } from './components/blogread/blogread.component';
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your APIKEY HERE&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your KEY HERE&libraries=drawing'}),
   ],
-  providers: [NguiMapComponent, ChartapiService, BlogapiService, GooglemarkerapiService, EmailapiService, SnakeScore],
+  providers: [
+    NguiMapComponent
+    ,ChartapiService
+    ,BlogapiService
+    ,GooglemarkerapiService
+    ,EmailapiService
+    ,SnakeScore
+    ,PolygonIOService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

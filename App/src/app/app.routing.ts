@@ -1,6 +1,5 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { GooglemapComponent } from './components/codeexamples/examples/googlemap/googlemap.component';
 import { AboutComponent } from './components/about/about.component';
 import { TwitterComponent } from './components/codeexamples/examples/twitter/twitter.component';
@@ -13,6 +12,7 @@ import { CodeexamplesComponent } from './components/codeexamples/codeexamples.co
 import { ContactmeComponent } from './components/contactme/contactme.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
+import { PolygonioComponent } from './components/codeexamples/examples/polygonio/polygonio.component';
 
 const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -20,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactmeComponent },
   { path: 'examples', component: CodeexamplesComponent },
   { path: 'google', component: GooglemapComponent },
+  { path: 'poly', component: PolygonioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blogread', component: BlogreadComponent },
