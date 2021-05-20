@@ -16,7 +16,7 @@ namespace RestAPICore.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("codeskills")]
+        [Route("skills")]
         public List<Models.ChartModel> getCodingSkills()
         {
             List<Models.ChartModel> skillsList = new List<Models.ChartModel>();
@@ -60,18 +60,7 @@ namespace RestAPICore.Controllers
             skill.skill = "Azure";
             skill.value = 7;
             skillsList.Add(skill);
-            return skillsList;
-        }
-        /// <summary>
-        /// Returns list of soft skills
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("softskills")]
-        public List<Models.ChartModel> getSoftSkills()
-        {
-            List<Models.ChartModel> skillsList = new List<Models.ChartModel>();
-            Models.ChartModel skill = new Models.ChartModel();
+            skill = new Models.ChartModel();
             skill.skill = "Communication";
             skill.value = 8;
             skillsList.Add(skill);

@@ -72,7 +72,7 @@ import { PolygonOverlayComponent } from './components/codeexamples/examples/poly
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your KEY HERE&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your Key Here&libraries=drawing'}),
   ],
   providers: [
     NguiMapComponent

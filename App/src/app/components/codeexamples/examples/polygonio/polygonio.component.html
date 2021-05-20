@@ -3,8 +3,8 @@
         <button class="btn btn-primary btn-sm" title="Poly Info" (click)="this.toolAction('poly')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
         <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
     </div>
-    <div id="polyoverlay" *ngIf="this.polyOverlay" [@slideInOut]>
-        <div id="blog-area">
+    <div id="polygon-overlay" *ngIf="this.polyOverlay" [@slideInOut]>
+        <div id="poly-area">
             <polygon-overlay></polygon-overlay>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 <p></p>
                 <h5>Previous Close:</h5>
                 <span class="boldtext">Open:</span> {{tickerClose[0].o}}
-                <br/><span class="boldtext">Close:</span><span [ngClass]="{'tickergreen': tickerClose[0].o < tickerClose[0].c, 'tickerred': tickerClose[0].o > tickerClose[0].c}">{{tickerClose[0].c}}</span>
+                <br/><span class="boldtext">Close:</span><span [ngClass]="{'tickergreen': tickerClose[0].o < tickerClose[0].c, 'tickerred': tickerClose[0].o > tickerClose[0].c}"> {{tickerClose[0].c}}</span>
                 <br/><span class="boldtext">Low:</span> {{tickerClose[0].l}}
                 <p></p>
                 <h5>Financials (as of {{tickerFinancials[0].updated}}):</h5>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="card text-center" style="width: 100%;" id="news_area" *ngFor="let artical of tickerNews">
-            <img class="card-img-top" src="{{artical.image_url}}" alt="Card image cap">
+            <img class="card-img-top" src="{{artical.image_url}}" onError="src='../../../assets/media/newsbanner.jpg'" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{artical.title}}</h5>
                 <p class="card-text">{{artical.description}}</p>

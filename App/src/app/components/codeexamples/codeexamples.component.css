@@ -20,3 +20,11 @@
 .devimage{
     margin-top: 5px;
 }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    .card-columns .card {
+        margin-bottom: 3rem !important;
+        box-shadow: 0px 0px 15px 0px #666;
+    }
+}

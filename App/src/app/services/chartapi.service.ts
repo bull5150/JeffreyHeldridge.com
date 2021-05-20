@@ -9,12 +9,8 @@ export class ChartapiService {
 
   constructor(private http: HttpClient) { }
 
-  public getCodingSkills()
+  public getSkills()
   {
-    return this.http.get<chart[]>('api/charts/codeskills');
-  }
-  public getSoftSkills()
-  {
-    return this.http.get<chart[]>('api/charts/softskills');
+    return this.http.get<chart[]>('api/charts/skills');
   }
 }

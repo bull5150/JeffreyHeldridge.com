@@ -42,7 +42,6 @@ export class PolygonioComponent implements OnInit {
   ngOnInit(): void {
     this.hideAll();
     this.infoloaded = false;
-    this.searchValue = "msft";
     this.getTickerInfo("msft");
   }
 
