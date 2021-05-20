@@ -30,30 +30,26 @@ export class AboutComponent implements OnInit {
 
   ngAfterViewInit(){
     this.zone.runOutsideAngular(() => {
-      //build coding skills
       let codingChart = am4core.create("skills", am4charts.XYChart);
       this.chartService.getSkills().subscribe(response =>{
         codingChart.data = response;
-        console.log(this.infoLoaded);
         let cscategoryAxis = codingChart.yAxes.push(new am4charts.CategoryAxis());
         cscategoryAxis.dataFields.category = "skill";
         cscategoryAxis.renderer.grid.template.location = 0;
         cscategoryAxis.renderer.minGridDistance = 30;
         let csvalueAxis = codingChart.xAxes.push(new am4charts.ValueAxis());
         csvalueAxis.hidden = true;
-        // Create series
         let csseries = codingChart.series.push(new am4charts.ColumnSeries());
         csseries.dataFields.valueX = "value";
         csseries.dataFields.categoryY = "skill";
         csseries.name = "Value";
-        csseries.columns.template.tooltipText = "{categoryY}";
+        csseries.columns.template.tooltipText = "{categoryY}: {valueX}";
         csseries.columns.template.fillOpacity = .8;
         csseries.fill = am4core.color("#333");
         csseries.stroke = am4core.color("#9f00ff");
         let cscolumnTemplate = csseries.columns.template;
         cscolumnTemplate.strokeWidth = 2;
         cscolumnTemplate.strokeOpacity = 1;
-        let softSkillsChart = am4core.create("softskills", am4charts.XYChart);
       });
     });
   }

@@ -36,7 +36,7 @@ namespace RestAPICore.Services
                 accessToken = GetAccessToken().GetAwaiter().GetResult();
             }
             var requestGeoTimeline = new HttpRequestMessage(HttpMethod.Get, string.Format(@"
-https://api.twitter.com/1.1/search/tweets.json?count={3}&geocode={0},{1},{2}mi&exclude_replies=1&tweet_mode=extended"
+https://api.twitter.com/1.1/search/tweets.json?count={3}&geocode={0},{1},{2}mi&exclude_replies=1&tweet_mode=extended&include_entities=true"
            , lat, lng, radius, count));
             requestGeoTimeline.Headers.Add("Authorization", "Bearer " + accessToken);
             var http = new HttpClient();
@@ -52,7 +52,7 @@ https://api.twitter.com/1.1/search/tweets.json?count={3}&geocode={0},{1},{2}mi&e
                 accessToken = GetAccessToken().GetAwaiter().GetResult();
             }
             var requestUserTimeline = new HttpRequestMessage(HttpMethod.Get, string.Format(@"
-https://api.twitter.com/1.1/statuses/user_timeline.json?count={0}&screen_name={1}&until={2}&exclude_replies=1&tweet_mode=extended"
+https://api.twitter.com/1.1/statuses/user_timeline.json?count={0}&screen_name={1}&until={2}&exclude_replies=1&tweet_mode=extended&include_entities=true"
 , count, userName, lookBack));
             requestUserTimeline.Headers.Add("Authorization", "Bearer " + accessToken);
             var httpClient = new HttpClient();
@@ -68,7 +68,7 @@ https://api.twitter.com/1.1/statuses/user_timeline.json?count={0}&screen_name={1
                 accessToken = GetAccessToken().GetAwaiter().GetResult();
             }
             var requestUserTimeline = new HttpRequestMessage(HttpMethod.Get, string.Format(@"
-            https://api.twitter.com/1.1/search/tweets.json?count={0}&q={1}&exclude_replies=1&tweet_mode=extended"
+            https://api.twitter.com/1.1/search/tweets.json?count={0}&q={1}&exclude_replies=1&tweet_mode=extended&include_entities=true"
 , count, term));
             requestUserTimeline.Headers.Add("Authorization", "Bearer " + accessToken);
             var httpClient = new HttpClient();

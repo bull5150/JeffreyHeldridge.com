@@ -11,9 +11,10 @@ img {
 }
 #resumewrapper {
     text-align: left;
+    margin-top: 45px;
 }
 .card{
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 }
 .worktitle {
     color: var(--apptheme)
@@ -21,6 +22,9 @@ img {
 #skills{
     width: 100%; 
     height: 800px; 
+}
+h3{
+    margin-top: 15px;
 }
 
 @media (max-width: 480px) { 

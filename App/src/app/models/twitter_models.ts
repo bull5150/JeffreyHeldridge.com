@@ -98,4 +98,7 @@ export class tweets{
     retweeted: boolean;
     possibly_sensitive: boolean;
     lang: string;
+    extended_entities: {
+        media: object[];
+    }
 }

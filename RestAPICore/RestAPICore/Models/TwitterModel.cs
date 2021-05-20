@@ -52,6 +52,7 @@ namespace RestAPICore.Models
             public bool retweeted { get; set; }
             public bool possibly_sensitive { get; set; }
             public string lang { get; set; }
+            public Extended_Entities extended_entities { get; set; }
             public Retweeted_Status retweeted_status { get; set; }
         }
 
@@ -154,6 +155,62 @@ namespace RestAPICore.Models
             public string expanded_url { get; set; }
             public string display_url { get; set; }
             public int[] indices { get; set; }
+        }
+
+
+        public class Extended_Entities
+        {
+            public Medium2[] media { get; set; }
+        }
+
+        public class Medium2
+        {
+            public long id { get; set; }
+            public string id_str { get; set; }
+            public int[] indices { get; set; }
+            public string media_url { get; set; }
+            public string media_url_https { get; set; }
+            public string url { get; set; }
+            public string display_url { get; set; }
+            public string expanded_url { get; set; }
+            public string type { get; set; }
+            public Sizes1 sizes { get; set; }
+        }
+
+        public class Sizes1
+        {
+            public Thumb1 thumb { get; set; }
+            public Small1 small { get; set; }
+            public Medium3 medium { get; set; }
+            public Large1 large { get; set; }
+        }
+
+        public class Thumb1
+        {
+            public int w { get; set; }
+            public int h { get; set; }
+            public string resize { get; set; }
+        }
+
+        public class Small1
+        {
+            public int w { get; set; }
+            public int h { get; set; }
+            public string resize { get; set; }
+        }
+
+        public class Medium3
+        {
+            public int w { get; set; }
+            public int h { get; set; }
+            public string resize { get; set; }
+        }
+
+        public class Large1
+        {
+            public int w { get; set; }
+            public int h { get; set; }
+            public string resize { get; set; }
         }
 
         public class Retweeted_Status

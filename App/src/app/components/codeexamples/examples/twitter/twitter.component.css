@@ -1,4 +1,4 @@
-img {
+.tweetuser {
     border-radius: 50%;
     width: 45px;
     margin-right: 15px;
@@ -9,8 +9,6 @@ img {
 }
 #tweet_area {
     margin-top: 15px;
-    border: 1px solid;
-    padding: 10px;
 }
 #tweet_area h5{
     margin-left: 40px;
@@ -43,6 +41,10 @@ img {
 }
 #loadingmask{
     margin-bottom: 400px;
+}
+.tweetmedia
+{
+    width: 400px;
 }
 
 
