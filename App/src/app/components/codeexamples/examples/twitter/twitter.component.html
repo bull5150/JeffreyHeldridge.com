@@ -33,9 +33,12 @@
     </div>
     <div id="tweet_area" *ngFor="let tweet of tweets">
         <div class="card" style="width:100%">
-            <img class="card-img-top" *ngIf="tweet.extended_entities != null" src="{{tweet.extended_entities.media[0].media_url}}" onError="src='../../../assets/media/twitter_example.jpg'" alt="Card image">
+            <video *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'video' && tweet.extended_entities.media[0].video_info.variants[0].bitrate != '0'" src="{{tweet.extended_entities.media[0].video_info.variants[0].url}}" controls></video>
+            <video *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'video' && tweet.extended_entities.media[0].video_info.variants[0].bitrate == '0'" src="{{tweet.extended_entities.media[0].video_info.variants[1].url}}" controls></video>
+            <img class="card-img-top" *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'photo'" src="{{tweet.extended_entities.media[0].media_url}}" onError="src='../../../assets/media/twitter_example.jpg'" alt="Card image">
             <div class="card-body">
                 <img class="tweetuser" src="{{tweet.user.profile_image_url}}" onError="src='../../../assets/media/default_profile_normal.png'"> <h5>{{tweet.user.name}}</h5>
+                
                 <h6>@{{tweet.user.screen_name}}</h6>
                 {{tweet.full_text}}
                 <br>

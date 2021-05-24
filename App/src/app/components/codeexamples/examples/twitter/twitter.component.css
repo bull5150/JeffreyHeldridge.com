@@ -42,10 +42,6 @@
 #loadingmask{
     margin-bottom: 400px;
 }
-.tweetmedia
-{
-    width: 400px;
-}
 
 
 /* Landscape phones and down */
@@ -69,7 +65,10 @@
 /* Landscape phones and down */
 @media (max-width: 375px) { 
     #dropdownnnn{
+        display: none;
+    }
+    #inputttt{
         margin-right: 5px;
-        width: 15px;
+        width: 125px;
     }
 } 

@@ -24,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blogread', component: BlogreadComponent },
+  { path: 'twitter/:userid', component: TwitterComponent },
   { path: 'twitter', component: TwitterComponent },
   { path: 'games', component: GamesComponent },
   { path: 'snake', component: SnakeComponent },

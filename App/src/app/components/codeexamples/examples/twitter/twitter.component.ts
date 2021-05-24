@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TwitterapiService } from '../../../../services/twitterapi.service';
 import { tweets } from '../../../../models/twitter_models';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { trigger, transition, animate, style} from '@angular/animations';
 
 declare let ga: Function;
@@ -31,16 +31,22 @@ export class TwitterComponent implements OnInit {
   public toolActive: boolean;
   public showTwitter: boolean;
   public infoLoaded: boolean;
+  public userID: string;
 
-  constructor(public twitterService: TwitterapiService, public router: Router) { 
+  constructor(public twitterService: TwitterapiService, private route: ActivatedRoute) { 
       ga('set', 'page', 'Twitter');
       ga('send', 'pageview');
   }
 
   ngOnInit(): void {
+    this.userID = this.route.snapshot.paramMap.get('userid');
+    if(this.userID == null)
+    {
+      this.userID = "jmheldridge";
+    }
+    this.getTweetsbyUser(this.userID, 50);
     this.infoLoaded = false;
     this.searchSelection = "user";
-    this.getTweetsbyUser("jmheldridge",50);
     this.hideAll();
   }
 

@@ -175,6 +175,8 @@ namespace RestAPICore.Models
             public string expanded_url { get; set; }
             public string type { get; set; }
             public Sizes1 sizes { get; set; }
+            public Video_Info video_info { get; set; }
+            public Additional_Media_Info additional_media_info { get; set; }
         }
 
         public class Sizes1
@@ -211,6 +213,25 @@ namespace RestAPICore.Models
             public int w { get; set; }
             public int h { get; set; }
             public string resize { get; set; }
+        }
+
+        public class Video_Info
+        {
+            public int[] aspect_ratio { get; set; }
+            public int duration_millis { get; set; }
+            public Variant[] variants { get; set; }
+        }
+
+        public class Variant
+        {
+            public int bitrate { get; set; }
+            public string content_type { get; set; }
+            public string url { get; set; }
+        }
+
+        public class Additional_Media_Info
+        {
+            public bool monetizable { get; set; }
         }
 
         public class Retweeted_Status

@@ -93,4 +93,7 @@ footer {
         height:350px;   /* Height of the footer */
         margin-top: calc(100% - 350px);
      }
+     .tooloverlaysm{
+        display: none;
+    }
 }
