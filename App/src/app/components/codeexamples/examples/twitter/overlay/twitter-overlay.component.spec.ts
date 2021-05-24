@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TwitterOverlayComponent } from './twitter-overlay.component';
 
@@ -6,7 +6,7 @@ describe('TwitterOverlayComponent', () => {
   let component: TwitterOverlayComponent;
   let fixture: ComponentFixture<TwitterOverlayComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TwitterOverlayComponent ]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PolygonOverlayComponent } from './polygon-overlay.component';
 
@@ -6,7 +6,7 @@ describe('PolygonOverlayComponent', () => {
   let component: PolygonOverlayComponent;
   let fixture: ComponentFixture<PolygonOverlayComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PolygonOverlayComponent ]
     })

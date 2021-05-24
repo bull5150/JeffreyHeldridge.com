@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PolygonioComponent } from './polygonio.component';
 
@@ -6,7 +6,7 @@ describe('PolygonioComponent', () => {
   let component: PolygonioComponent;
   let fixture: ComponentFixture<PolygonioComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PolygonioComponent ]
     })
