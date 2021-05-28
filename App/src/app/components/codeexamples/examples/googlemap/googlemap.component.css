@@ -118,22 +118,6 @@ i{
         margin-bottom: 15PX;
     }
 }
-
-#googlemapoverlay {
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-    margin-left: calc(88% - 205px);
-    overflow-y: scroll;
-    /* direction: rtl; */
-}
-
 @media (max-width: 375px) { 
     #mapmenu li{
         margin-right: 2px;

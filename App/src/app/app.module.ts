@@ -37,6 +37,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { BlogreadComponent } from './components/blogread/blogread.component';
 import { PolygonioComponent } from './components/codeexamples/examples/polygonio/polygonio.component';
 import { PolygonOverlayComponent } from './components/codeexamples/examples/polygonio/overlay/polygon-overlay.component';
+import { AngularformsComponent } from './components/codeexamples/examples/angularforms/angularforms.component';
+import { AngularformsOverlayComponent } from './components/codeexamples/examples/angularforms/overlay/angularforms-overlay.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { PolygonOverlayComponent } from './components/codeexamples/examples/poly
     BlogreadComponent,
     PolygonioComponent,
     PolygonOverlayComponent,
+    AngularformsComponent,
+    AngularformsOverlayComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -72,7 +76,7 @@ import { PolygonOverlayComponent } from './components/codeexamples/examples/poly
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your API Key Here&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAZWayVJtBrt51K4cFnHELPD7kHjFvHdT4&libraries=drawing'}),
   ],
   providers: [
     NguiMapComponent

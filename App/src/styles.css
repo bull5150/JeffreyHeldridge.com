@@ -40,7 +40,7 @@ button{
     height: 100%;
     background-color: rgba(5,5,5,0.5);
 }
-#aboutoverlay, #twitteroverlay, #emailoverlay, #gamesoverlay, #blogoverlay, #polygon-overlay {
+#aboutoverlay, #twitteroverlay, #emailoverlay, #gamesoverlay, #blogoverlay, #polygon-overlay, #angularformsoverlay {
     position: fixed;
     height: 100%;
     top: 0;
@@ -66,7 +66,7 @@ button{
     overflow-y: scroll;
     /* direction: rtl; */
 }
-#googlemap-area, #about-area, #twitter-area, #email-area, #games-area, #blog-area, #poly-area {
+#googlemap-area, #about-area, #twitter-area, #email-area, #games-area, #blog-area, #poly-area, #angularforms-area {
     flex-wrap: wrap;
     margin-right: 7px;
     margin-left: 7px;

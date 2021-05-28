@@ -20,7 +20,9 @@
 .devimage{
     margin-top: 5px;
 }
-
+.card-deck{
+    margin-top: 25px;
+}
 /* Landscape phones and down */
 @media (max-width: 480px) { 
     .card-columns .card {

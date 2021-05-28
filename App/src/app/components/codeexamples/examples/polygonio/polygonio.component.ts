@@ -35,7 +35,7 @@ export class PolygonioComponent implements OnInit {
   public showPoly: boolean;
 
   constructor(private polyService:PolygonIOService) { 
-    ga('set', 'page', 'Blog');
+    ga('set', 'page', 'Poly');
     ga('send', 'pageview');
   }
 

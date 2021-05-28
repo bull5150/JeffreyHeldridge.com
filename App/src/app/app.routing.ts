@@ -13,6 +13,7 @@ import { ContactmeComponent } from './components/contactme/contactme.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { BlogreadComponent } from './components/blogread/blogread.component';
 import { PolygonioComponent } from './components/codeexamples/examples/polygonio/polygonio.component';
+import { AngularformsComponent } from './components/codeexamples/examples/angularforms/angularforms.component';
 
 const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'snake', component: SnakeComponent },
   { path: 'tetris', component: TetrisComponent },
+  { path: 'angularforms', component: AngularformsComponent},
   { path: '**', component: PagenotfoundComponent},
 ];
 

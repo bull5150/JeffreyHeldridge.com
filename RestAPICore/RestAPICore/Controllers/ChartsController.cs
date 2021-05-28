@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,6 +94,21 @@ namespace RestAPICore.Controllers
             skill.value = 7;
             skillsList.Add(skill);
             return skillsList;
+        }
+        /// <summary>
+        /// Returns a json object of social media companies monthly active users by year
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("race")]
+        public object getRaceSkills()
+        {
+#if DEBUG
+            string allText = System.IO.File.ReadAllText(@"C:\Repos\JeffreyHeldridge.com_sidefiles\racechart.json");
+#else
+            string allText = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "racechart.json");
+#endif
+            return JsonConvert.DeserializeObject(allText);
         }
     }
 }

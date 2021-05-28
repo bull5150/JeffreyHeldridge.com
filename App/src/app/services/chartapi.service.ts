@@ -13,4 +13,8 @@ export class ChartapiService {
   {
     return this.http.get<chart[]>('api/charts/skills');
   }
+  public getRaceChart()
+  {
+    return this.http.get<object>('api/charts/race');
+  }
 }
