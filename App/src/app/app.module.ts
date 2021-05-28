@@ -76,7 +76,7 @@ import { AngularformsOverlayComponent } from './components/codeexamples/examples
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAZWayVJtBrt51K4cFnHELPD7kHjFvHdT4&libraries=drawing'}),
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=Your Key Here&libraries=drawing'}),
   ],
   providers: [
     NguiMapComponent
