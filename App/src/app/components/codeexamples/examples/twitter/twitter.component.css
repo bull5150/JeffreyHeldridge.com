@@ -1,0 +1,74 @@
+.tweetuser {
+    border-radius: 50%;
+    width: 45px;
+    margin-right: 15px;
+}
+#twitterwrapper{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+#tweet_area {
+    margin-top: 15px;
+}
+#tweet_area h5{
+    margin-left: 40px;
+    margin-top: 4px;
+}
+#tweet_area h6{
+    color: #1dcaff;
+    margin-top: 4px;
+}
+#tweet_area img{
+    float: left
+}
+.tweetdets {
+    color: #1dcaff;
+    font-size: .8em;
+}
+#dropdownnnn{
+    float: left;
+    margin-right: 25px;
+    height: 49px;
+}
+#inputttt{
+    width: 300px;
+    float: left;
+    margin-right: 25px;
+}
+#submitbutton{
+    color: #fff;
+    height: 49px;
+}
+#loadingmask{
+    margin-bottom: 400px;
+}
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    #twitterwrapper{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #dropdownnnn{
+        margin-right: 5px;
+        width: 90px;
+    }
+    #submitbutton{
+        width: 90px;
+    }
+    #inputttt{
+        margin-right: 5px;
+        width: 170px;
+    }
+} 
+/* Landscape phones and down */
+@media (max-width: 375px) { 
+    #dropdownnnn{
+        display: none;
+    }
+    #inputttt{
+        margin-right: 5px;
+        width: 125px;
+    }
+} 

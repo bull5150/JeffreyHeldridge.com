@@ -1,0 +1,30 @@
+#formwrapper{
+    max-width: 800px;
+    padding-left: 200px;
+}
+label{
+    margin-top: 15px;
+}
+small{
+    color: var(--apptheme);
+}
+#submitbutton{
+    margin-top: 15px;
+    color: #fff;
+}
+#submitbutton a{
+    width: 100%;
+}
+#emailalert
+{
+    margin-top: 15px;
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    #formwrapper{
+        max-width: 480px;
+        padding-left: 25px;
+        padding-right: 55px;
+    }
+}

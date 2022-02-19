@@ -1,0 +1,32 @@
+.titlehighlight {
+    color: var(--apptheme) !important;
+}
+#infowrapper{
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+#websiteswrapper{
+    margin-top: 50px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.devimage img
+{
+    height: 25px;
+    width: 25px;
+}
+.devimage{
+    margin-top: 5px;
+}
+.card-deck{
+    margin-top: 25px;
+}
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    .card-columns .card {
+        margin-bottom: 3rem !important;
+        box-shadow: 0px 0px 15px 0px #666;
+    }
+}

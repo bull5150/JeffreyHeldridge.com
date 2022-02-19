@@ -1,0 +1,25 @@
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Blog Info" (click)="this.toolAction('blog')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="blogoverlay" *ngIf="this.blogOverlay" [@slideInOut]>
+        <div id="blog-area">
+            <blog-overlay></blog-overlay>
+        </div>
+    </div>
+</div>
+<div class="text-center" id="loadingmask" *ngIf="infoLoaded == false">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <br/>Loading Please Wait...
+</div>
+<div id="blogwrapper" *ngIf="infoLoaded == true">
+    <h4>Developer Blog</h4>
+    <div id="blog_area" *ngFor="let blog of blogList">
+        <img src="{{blog.thumbImageURL}}" onError="src='../../../assets/media/profile_small.jpg'"> <h5>{{blog.createDate}}</h5>
+        {{blog.blogEntry}}
+        <br>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.boldtext{
+    font-weight: bold;
+}
+.tickergreen{
+    color: green;
+    size: 1.2em;
+    font-weight: bold;
+}
+.tickerred{
+    color: red;
+    size: 1.2em;
+    font-weight: bold;
+}
+#polywrapper{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.card{
+    margin-top: 10px;
+}
+.card a img{
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+}
+#searchfield{
+    float: right;
+    width: 350px;
+    margin-bottom: 0px;
+    margin-top: -7.5px;
+}
+#searchbutton{
+    float: right;
+    margin-left: 3px;
+    margin-top: -15px;
+    color: #fff;
+    height: 49px;
+}
+#searcharea{
+    width: 100%;
+    height: 75px;
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    #polywrapper{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #searchfield{
+        width: 200px;
+    }
+    #searcharea{
+        float: none;
+        margin-top: 15px;
+        margin-right: 85PX;
+        margin-bottom: 15PX;
+    }
+} 
+/* Landscape phones and down */
+@media (max-width: 375px) { 
+
+} 

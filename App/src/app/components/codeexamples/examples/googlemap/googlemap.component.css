@@ -1,0 +1,139 @@
+.gmnoprint img {
+    max-width: none; 
+}
+.gm-style label { width: auto; display: inline; }
+#googlewrapper{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#mapmenu {
+    float: left;
+
+    margin-top: -7px;
+}
+#mapmenu ul{
+    list-style-type: none;
+    display: inline;
+    font-size: 1.8em;
+}
+#mapmenu li{
+    float:left;
+    margin-right: 5px;
+}
+#mapmenu a{
+    width: 45px !important;
+}
+#searchfield{
+    float: right;
+    width: 350px;
+    margin-bottom: 0px;
+    margin-top: -7.5px;
+}
+#searchbutton{
+    float: right;
+    margin-left: 3px;
+    margin-top: -15px;
+    color: #fff;
+    height: 49px;
+}
+#oldtimeradio input{
+    margin-left: 25px;
+}
+#oldtimeradio{
+    margin-left: -25px;
+}
+#info_details{
+    border-radius: .2em;
+    margin-top: 75px;
+}
+#addressto{
+    margin-top: -4px;
+    float: left;
+}
+#addressfrom{
+    margin-top: -4px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#directionsbutton{
+    margin-top: -4px;
+    float: left;
+    margin-left: 5px;
+    color: #fff;
+    height: 49px;
+}
+#directions{
+    float: right;
+}
+i{
+    margin-left: -4px;
+}
+#searcharea{
+    float: right;
+    margin-top: -50px;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    #googlewrapper{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    #googlewrapper{
+        padding-left: 0px;
+        padding-right: 0px;
+        height: 1050px;
+    }
+    #mapmenu {
+        margin-left: 1px;
+        margin-top: 55px;
+    }
+    #info_details{
+        text-align: center;
+    }
+    #info_details table{
+        margin: auto;
+    }
+    #searchfield{
+        float: left;
+        width: 200px;
+    }
+    #oldtimeradio{
+        margin-left: 60px;
+    }
+    #searcharea{
+        float: right;
+        margin-top: 15px;
+        margin-right: 95PX;
+        margin-bottom: 15PX;
+    }
+    #mapmenu a{
+        width: 80px !important;
+        margin-top: 1px;
+    }
+    #directions{
+        float: none;
+        margin-top: 200px;
+        margin-left: -3px;
+    }
+}
+@media (max-width: 375px) { 
+    #mapmenu li{
+        margin-right: 1px;
+    }
+    #mapmenu a{
+        width: 80px !important;
+        margin-top: 1px;
+    }
+    #searcharea{
+        margin-right: 60PX;
+    }
+    #directionsbutton{
+        margin-top: 25px;
+    }
+ }

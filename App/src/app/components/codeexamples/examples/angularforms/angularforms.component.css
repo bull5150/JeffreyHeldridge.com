@@ -1,0 +1,80 @@
+#racechartdiv, #radialchartdiv{
+    width: 100%; 
+    height: 400px; 
+}
+#formswrapper{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.formlabel{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--apptheme);
+}
+h3, h4{
+    text-align: center;
+    margin-top: 25px;
+}
+input[type=radio] {
+    border: 0px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+textarea {
+    width: 100%;
+}
+.inputLabel{
+    margin-right: 10px;
+}
+#formswrapper button {
+    margin-left: 5px;
+    width: 100px;
+}
+#buttonarea{
+    text-align: center;
+}
+#spinnersarea{
+    text-align: center;
+}
+#cardarea{
+    margin: auto;
+    text-align: center;
+}
+#tablemobile{
+    display: none;
+    text-align: center;
+}
+.red{
+    background-color: tomato;
+}
+.green{
+    background-color: yellowgreen;
+}
+.yellow{
+    background-color: yellow;
+}
+@media (max-width: 720px) { 
+    #formswrapper{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    table{
+        font-size: .5em !important;
+    }
+    th{
+        font-size: .5em !important;
+    }
+}
+@media (max-width: 480px) { 
+    #tablearea{
+        display: none;  
+    }
+    #tablearea{
+        display: none;  
+    }
+    #tablemobile{
+        display: inline;
+    }
+}

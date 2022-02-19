@@ -1,0 +1,12 @@
+img{
+    width:100%;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+}
+#gameswrapper{
+    padding-left: 10%;
+}
+.imagelabel{
+    margin-left: 45%;
+    color: var(--apptheme);
+}

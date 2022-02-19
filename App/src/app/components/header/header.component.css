@@ -1,0 +1,56 @@
+.jumbotron{
+    background-color: #555;
+    padding-top: 15px;
+}
+#textcontainer{
+    margin-left: 50px;
+}
+h1{
+    font-size: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: solid 3px var(--bannertheme);
+}
+.jumbospanh6{
+    color: #fff;
+}
+h1{
+    animation: animated-text 4s steps(29, end) 1s 1 normal both, 
+                animated-cursor 600ms steps(29,end) infinite;
+}
+@keyframes animated-text{
+    from {width:0;}
+    to {width: 800px;}
+}
+@keyframes animated-cursor{
+    from{border-right-color: var(--bannertheme)}
+    to{border-right-color: transparent;}
+}
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 770px) { 
+    h1{
+        font-size: 2em;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    h1{
+        font-size: .9em;
+    }
+
+    h6{
+        font-size: .7em;
+    }
+    @keyframes animated-text{
+        from {width:0;}
+        to {width: 306px;}
+    }
+    #textcontainer{
+        margin-left: 5px;
+    }
+}

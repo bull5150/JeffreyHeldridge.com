@@ -1,0 +1,64 @@
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Poly Info" (click)="this.toolAction('poly')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="polygon-overlay" *ngIf="this.polyOverlay" [@slideInOut]>
+        <div id="poly-area">
+            <polygon-overlay></polygon-overlay>
+        </div>
+    </div>
+</div>
+<div id="polywrapper">
+    <div id="searcharea">
+        <div id="searchbutton">
+            <a class="btn btn-primary btn-l" (click)="getTickerInfo(this.searchValue)">Submit</a>
+        </div>
+        <div id="searchfield">
+            <input class="inputttt" placeholder="Enter Ticker Symbol Here..." id="searchfield" [(ngModel)]="this.searchValue" (keydown.enter)="getTickerInfo(this.searchValue)"/>
+        </div>
+    </div>
+    <div class="text-center" id="loadingmask" *ngIf="infoloaded == false">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <br/>Loading Please Wait...
+    </div>
+    <div id="cardarea" *ngIf="this.infoloaded == true">
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <h3 class="card-title">{{tickerInfo[0].name}}</h3>
+                <h5>Info:</h5>
+                <span class="boldtext">Type:</span> {{tickerInfo[0].market}}
+                <br/><span class="boldtext">Primary Exchange:</span> {{tickerInfo[0].primary_exchange}}
+                <br/><span class="boldtext">Location:</span> {{tickerInfo[0].locale}}
+                <p></p>
+                <h5>Previous Close:</h5>
+                <span class="boldtext">Open:</span> {{tickerClose[0].o}}
+                <br/><span class="boldtext">Close:</span><span [ngClass]="{'tickergreen': tickerClose[0].o < tickerClose[0].c, 'tickerred': tickerClose[0].o > tickerClose[0].c}"> {{tickerClose[0].c}}</span>
+                <br/><span class="boldtext">Low:</span> {{tickerClose[0].l}}
+                <p></p>
+                <h5>Financials (as of {{tickerFinancials[0].updated}}):</h5>
+                <span class="boldtext">Assets NonCurrent:</span> {{tickerFinancials[0].assetsNonCurrent | number}}
+                <br/><span class="boldtext">Debit NonCurrent:</span> {{tickerFinancials[0].debtNonCurrent | number}}
+                <br/><span class="boldtext">Book Value Per Share:</span> {{tickerFinancials[0].bookValuePerShare}}
+                <br/><span class="boldtext">Ratio:</span> {{tickerFinancials[0].currentRatio}}
+                <br/><span class="boldtext">Debit to Equity Ratio:</span> {{tickerFinancials[0].debtToEquityRatio}}
+                <br/><span class="boldtext">Earnings Per Share:</span> {{tickerFinancials[0].earningsPerBasicShareUSD}}
+                <br/><span class="boldtext">Gross Profit:</span> {{tickerFinancials[0].grossProfit | number}}
+                <br/><span class="boldtext">Dividends Per Share:</span> {{tickerFinancials[0].dividendsPerBasicCommonShare}}
+                <br/><span class="boldtext">Dividend Yield:</span> {{tickerFinancials[0].dividendYield}}
+            </div>
+        </div>
+        <div class="card text-center" style="width: 100%;" id="news_area" *ngFor="let artical of tickerNews">
+            <img class="card-img-top" src="{{artical.image_url}}" onError="src='../../../assets/media/newsbanner.jpg'" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{artical.title}}</h5>
+                <p class="card-text">{{artical.description}}</p>
+                <a href="{{artical.article_url}}" target="_blank" class="btn btn-primary">
+                <img src="{{artical.publisher.favicon_url}}" onError="src='../../../assets/media/default_profile_normal.png'">&nbsp; View on {{artical.publisher.name}}
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>

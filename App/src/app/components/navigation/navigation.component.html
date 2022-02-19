@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">JeffreyHeldridge.com</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{ active: homeActivated }">
+            <a class="nav-link" href="#home" (click)="toggleNavbar()">Home</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: aboutActivated }">
+            <a class="nav-link" href="#about" (click)="toggleNavbar()">About Me</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: examplesActivated }">
+            <a class="nav-link" href="#examples" (click)="toggleNavbar()">Coding Examples</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: blogreadActivated }">
+            <a class="nav-link" href="#blogread" (click)="toggleNavbar()">Blog</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: contactActivated }">
+            <a class="nav-link" href="#contact" (click)="toggleNavbar()">Contact Me</a>
+        </li>
+        </ul>
+        <span class="navbar-text">
+            <div id="sociallinks">
+                <a href='https://www.linkedin.com/in/jeff-heldridge-02235698/'><i class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i></a>
+                <a href='https://twitter.com/JMHeldridge'><i class="fa fa-twitter-square fa-2x fa-inverse" aria-hidden="true"></i></a>
+                <a href='https://github.com/bull5150'><i class="fa fa-github-square fa-2x fa-inverse" aria-hidden="true"></i></a>
+            </div>
+        </span>
+    </div>
+</nav>

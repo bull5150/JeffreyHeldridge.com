@@ -1,0 +1,50 @@
+
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Info" (click)="this.toolAction('twitter')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="twitteroverlay" *ngIf="this.twitterOverlay" [@slideInOut]>
+        <div id="twitter-area">
+            <twitter-overlay></twitter-overlay>
+        </div>
+    </div>
+</div>
+<div class="text-center" id="loadingmask" *ngIf="infoLoaded == false">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <br/>Loading Please Wait...
+</div>
+<div id="twitterwrapper" *ngIf="infoLoaded == true">
+    <div id="searcharea">
+        <div>
+            <select class="btn btn-primary" id="dropdownnnn" [(ngModel)]="this.searchSelection">
+                <option value="user">By User Name</option>
+                <option value="keyword">By KeyWord</option>
+            </select>
+        </div>
+        <div>
+            <input class="inputttt" id="inputttt" placeholder="User Name or Keyword Here...." [(ngModel)]="this.searchValue" (keydown.enter)="submitbtn()"/>
+        </div>
+        <div>
+            <a class="btn btn-primary btn-l" id="submitbutton" (click)="submitbtn()">Submit</a>
+        </div>
+    </div>
+    <div id="tweet_area" *ngFor="let tweet of tweets">
+        <div class="card" style="width:100%">
+            <video *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'video' && tweet.extended_entities.media[0].video_info.variants[0].bitrate != '0'" src="{{tweet.extended_entities.media[0].video_info.variants[0].url}}" controls></video>
+            <video *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'video' && tweet.extended_entities.media[0].video_info.variants[0].bitrate == '0'" src="{{tweet.extended_entities.media[0].video_info.variants[1].url}}" controls></video>
+            <img class="card-img-top" *ngIf="tweet.extended_entities != null && tweet.extended_entities.media[0].type == 'photo'" src="{{tweet.extended_entities.media[0].media_url}}" onError="src='../../../assets/media/twitter_example.jpg'" alt="Card image">
+            <div class="card-body">
+                <img class="tweetuser" src="{{tweet.user.profile_image_url}}" onError="src='../../../assets/media/default_profile_normal.png'"> <h5>{{tweet.user.name}}</h5>
+                
+                <h6>@{{tweet.user.screen_name}}</h6>
+                {{tweet.full_text}}
+                <br>
+                <span class="tweetdets">{{tweet.user.location}} - {{tweet.created_at}}</span>
+            </div>
+          </div>
+    </div>
+</div>
+

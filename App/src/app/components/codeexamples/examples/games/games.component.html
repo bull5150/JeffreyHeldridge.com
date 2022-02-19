@@ -1,0 +1,37 @@
+
+<div id="tooloverlay" [@slideInOut] [ngClass]="{'tooloverlaysm' : toolActive === false, 'tooloverlaylg' : toolActive === true}">
+    <div id="toolbuttons">
+        <button class="btn btn-primary btn-sm" title="Info" (click)="this.toolAction('games')"><i class="fa fa-info fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-primary btn-sm" title="Close Tool Tip" (click)="this.toolClose()"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></button>
+    </div>
+    <div id="gamesoverlay" *ngIf="this.gamesOverlay" [@slideInOut]>
+        <div id="games-area">
+            <games-overlay></games-overlay>
+        </div>
+    </div>
+</div>
+<div id="gameswrapper">
+    <div class="row">
+        <div class="col-sm-3">
+            <a routerLink="/snake"><img src="./../../../assets/media/snakeimage.png"/></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <span class="imagelabel"></span>ngxSnake
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-sm-3">
+            <a routerLink="/tetris"><img src="./../../../assets/media/tetrisimage.png"/></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <span class="imagelabel"></span>Tetris
+        </div>
+    </div>
+</div>
